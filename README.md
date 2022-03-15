@@ -5,6 +5,10 @@
 2. [Installation](#installation)
 3. [Run](#run)
 4. [REPL](#repl)
+5. [Conventions](#conventions)
+6. [Input Data](#input-data)
+7. [Constants](#constant)
+8. [Strings](#strings)
  
 
 ## Basics
@@ -63,7 +67,16 @@ puts "Hello, world"
 
 => nil ---> value returned
 ```
+- Ruby is Idiomatic language, it means you can understand the code only reading the lines of code
+```ruby
+iteration = 5
 
+iteration += 2
+
+print(iteration)
+
+=> 7
+```
 ## Installation
 1.- Verify if you have installed ruby already
 
@@ -134,4 +147,79 @@ d
 #### Rubymine
 If you have this IDE you can go to the Tools in the top bar and run irb or pry
 
+### Conventions
+Conventions are important in Ruby
+#### Snake case
+All the variables must be in downcase and connected by underscore
+```ruby
+hello_world = 'Hello, world'
 
+romeo_and_juliet = File.read("romeo-juliet.txt")
+```
+
+
+### Input data
+
+- Read file
+```ruby
+File.read("romeo-juliet.txt")
+```
+or
+```ruby
+File.read"romeo-juliet.txt"
+```
+- Read console
+```ruby
+user_text = gets
+hello!
+
+=> "hello!"
+```
+- Read from environment
+
+```ruby
+export TEST_VARIABLE = "hello"
+ENV["TEST_VARIABLE"]
+
+=> "hello"
+```
+- Read from standard
+```ruby
+STDIN.gets
+```
+- Read from CLI
+```console
+$ruby print_arguments.rb arg1 arg2
+
+=> 
+arg1
+arg2
+
+```
+or
+```console
+ruby print_arguments_file.rb romeo-juliet.txt
+
+```
+
+
+### Constant
+All the constants must be in uppercase
+```ruby
+FILE_NAME = "romeo-juliet.txt"
+```
+
+### Strings
+
+Use single quote when you want to set string
+```ruby
+a = 'romeo-juliet'
+```
+User double quote when you want to use interpolation
+```ruby
+extension = 'txt'
+
+a = "romeo-juliet.#{extension}"
+
+=> "romeo-juliet.txt"
+```
