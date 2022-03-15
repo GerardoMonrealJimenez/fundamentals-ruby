@@ -9,6 +9,8 @@
 6. [Input Data](#input-data)
 7. [Constants](#constant)
 8. [Strings](#strings)
+9. [Functions](#functions)
+10. [Global variables](#global-variables)
  
 
 ## Basics
@@ -223,3 +225,33 @@ a = "romeo-juliet.#{extension}"
 
 => "romeo-juliet.txt"
 ```
+### Functions
+Functions structure
+
+ ```ruby
+# 1.- You must put the keyword "def"
+# 2.- Put the function name with snake case
+# 3.- return the value if is necessary
+# 3.- close the function with the keyword "end"
+def function_name(argument1, argument2)
+  return "Hello, world!" #the return might be optional
+end
+
+def function_name2(argument1, argument2)
+  "Hello, world!" 
+end
+```
+now let me tell you something, in ruby actually we dont have functions!!!
+we have methods, remember all in ruby is a class, so all "function" indeed is
+a method!
+
+### Global variables
+You can define a global variable using dollar keyword
+ ```ruby
+$a = 10
+
+p $a
+=> 10
+```
+I highly recommended do not use them, just take this knowledge like casual information
+
